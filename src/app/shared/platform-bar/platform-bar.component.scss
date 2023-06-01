@@ -1,0 +1,29 @@
+.platform-bar-container {
+  position:relative;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid rgba(0,0,0,.12);
+  justify-content:space-between;
+  padding:0 12px;
+  height:64px;
+  min-width:100%;
+  z-index:11
+}
+
+.platform-bar-right,
+.platform-bar-middle,
+.platform-bar-left {
+  display: flex;
+  align-items: center;
+}
+
+.platform-bar-middle {
+  flex:0 1 720px;
+  padding:0 12px;
+  justify-content:center
+}
+
+.platform-bar-right {
+  justify-content: flex-end;
+  padding-right: 8px;
+}

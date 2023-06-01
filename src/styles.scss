@@ -1,1 +1,146 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ng-eztrack-primary: mat.define-palette(mat.$indigo-palette);
+$ng-eztrack-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ng-eztrack-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$ng-eztrack-theme: mat.define-light-theme((
+  color: (
+    primary: $ng-eztrack-primary,
+    accent: $ng-eztrack-accent,
+    warn: $ng-eztrack-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($ng-eztrack-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.shell {
+  height:100%;
+  box-sizing:border-box;
+  display:flex;
+  flex:1;
+  flex-direction:column
+}
+
+.panel-container {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  display:block;
+  position:relative;
+  min-height:0
+}
+
+.panel-container-outter {
+  position:absolute;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  height:100%
+}
+
+.panel-container-outter   .panel-container-inner {
+  flex:1;
+  flex-direction:column;
+  align-items:stretch;
+  display:flex;
+  width:100%;
+  height:100%
+}
+
+.panel-container-outter   .panel-container-horizontal {
+  flex-direction:column;
+  overflow-y:hidden
+}
+
+.panel-container-outter   .panel-container-vertical {
+  flex-direction:row;
+  overflow-x:hidden
+}
+
+.panel {
+  flex:0 1 auto;
+  margin:0;
+  overflow:visible;
+  position:relative;
+  min-height:0;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+
+.panel-center {
+  flex:1 1 1px;
+}
+
+.panel-side-left,
+.panel-side-right {
+  overflow-x: visible;
+}
+
+.panel-side-bottom,
+.panel-side-top {
+  overflow-y: visible;
+}
+
+.panel-content {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  overflow:visible;
+  position:relative;
+  min-height:0
+}
+
+.panel-content-wrapper {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+  width:100%;
+  height:100%
+}
+
+.central-page {
+  display:flex;
+  flex-direction:row;
+  height:100%;
+  width:100%;
+  min-height:0;
+  background-color:#fff
+}
+
+.content-viewport {
+  box-sizing:border-box;
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  height:100%;
+  width:100%
+}
+
