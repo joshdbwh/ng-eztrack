@@ -1,0 +1,105 @@
+.panel-container {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  display:block;
+  position:relative;
+  min-height:0
+}
+
+.panel-container-outter {
+  position:absolute;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  height:100%
+}
+
+.panel-container-outter   .panel-container-inner {
+  flex:1;
+  flex-direction:column;
+  align-items:stretch;
+  display:flex;
+  width:100%;
+  height:100%
+}
+
+.panel-container-outter   .panel-container-horizontal {
+  flex-direction:column;
+  overflow-y:hidden
+}
+
+.panel-container-outter   .panel-container-vertical {
+  flex-direction:row;
+  overflow-x:hidden
+}
+
+.panel {
+  flex-grow:1;
+  margin:0;
+  overflow:visible;
+  position:relative;
+  min-height:0;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+
+.panel-center {
+  flex:1 1 1px;
+}
+
+.panel-side-left,
+.panel-side-right {
+  overflow-x: visible;
+}
+
+.panel-side-bottom,
+.panel-side-top {
+  overflow-y: visible;
+}
+
+.panel-content {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  overflow:visible;
+  position:relative;
+  min-height:0
+}
+
+.panel-content-wrapper {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+  width:100%;
+  height:100%
+}
+
+.panel-content-wrapper.panel-side-left {
+  right: 0;
+}
+
+.panel-content-wrapper.panel-side-right {
+  left: 0;
+}
+
+.central-page {
+  display:flex;
+  flex-direction:row;
+  height:100%;
+  width:100%;
+  min-height:0;
+  background-color:#fff
+}
+
+.content-viewport {
+  box-sizing:border-box;
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  height:100%;
+  width:100%
+}
