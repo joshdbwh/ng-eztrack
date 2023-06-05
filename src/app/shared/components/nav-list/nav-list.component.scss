@@ -1,0 +1,40 @@
+.nav-list {
+  padding: 5px 10px;
+}
+
+.mdc-list-item {
+  margin: 5px 0 !important;
+  height: 40px !important;
+  min-height: 40px;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.link-content {
+  display: flex;
+  align-items: center;
+
+  app-icon {
+    color: rgba(0,0,0,.54);
+  }
+}
+
+.link-item {
+  padding-left: 8px;
+}
+
+.link__active {
+  background-color: rgba(161,194,250,.26);
+  color: #3367d6;
+  // border-left: solid 4px #3367d6;
+  // padding: 0 4px;
+
+  .link-content {
+    app-icon {
+      color: #3367d6;
+    }
+    .link-title {
+      color: #3367d6;;
+    }
+  }
+}

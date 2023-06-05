@@ -1,0 +1,81 @@
+<div class="viewport">
+
+<app-card title="Linked Accounts">
+  <table mat-table [dataSource]="dataSource">
+    <!-- User name Definition -->
+    <ng-container matColumnDef="institutionName">
+      <mat-header-cell *matHeaderCellDef> Bank </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.institutionName }} </mat-cell>
+    </ng-container>
+
+    <!-- Age Definition -->
+    <ng-container matColumnDef="dateAdded">
+      <mat-header-cell *matHeaderCellDef> Date Added </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.dateAdded }} </mat-cell>
+    </ng-container>
+
+    <!-- Title Definition -->
+    <ng-container matColumnDef="meta">
+      <mat-header-cell *matHeaderCellDef> Info </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.meta }} </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *matHeaderRowDef="['institutionName', 'dateAdded', 'meta']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['institutionName', 'dateAdded', 'meta']"></mat-row>
+  </table>
+</app-card>
+
+<app-card title="Linked Accounts">
+  <table mat-table [dataSource]="dataSource">
+    <!-- User name Definition -->
+    <ng-container matColumnDef="institutionName">
+      <mat-header-cell *matHeaderCellDef> Bank </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.institutionName }} </mat-cell>
+    </ng-container>
+
+    <!-- Age Definition -->
+    <ng-container matColumnDef="dateAdded">
+      <mat-header-cell *matHeaderCellDef> Date Added </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.dateAdded }} </mat-cell>
+    </ng-container>
+
+    <!-- Title Definition -->
+    <ng-container matColumnDef="meta">
+      <mat-header-cell *matHeaderCellDef> Info </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.meta }} </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *matHeaderRowDef="['institutionName', 'dateAdded', 'meta']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['institutionName', 'dateAdded', 'meta']"></mat-row>
+  </table>
+</app-card>
+
+<app-card title="Linked Accounts">
+  <table mat-table [dataSource]="dataSource">
+    <!-- User name Definition -->
+    <ng-container matColumnDef="institutionName">
+      <mat-header-cell *matHeaderCellDef> Bank </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.institutionName }} </mat-cell>
+    </ng-container>
+
+    <!-- Age Definition -->
+    <ng-container matColumnDef="dateAdded">
+      <mat-header-cell *matHeaderCellDef> Date Added </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.dateAdded }} </mat-cell>
+    </ng-container>
+
+    <!-- Title Definition -->
+    <ng-container matColumnDef="meta">
+      <mat-header-cell *matHeaderCellDef> Info </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.meta }} </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *matHeaderRowDef="['institutionName', 'dateAdded', 'meta']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['institutionName', 'dateAdded', 'meta']"></mat-row>
+  </table>
+</app-card>
+
+</div>

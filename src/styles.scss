@@ -31,10 +31,17 @@ $ng-eztrack-theme: mat.define-light-theme((
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
+@include mat.core-theme($ng-eztrack-theme);
 @include mat.all-component-themes($ng-eztrack-theme);
 
 /* You can add global styles to this file, and also import other style files */
 @import './cosmetic/base.scss';
+
+body {
+  font-family: Roboto;
+}
+
+span { font-size: 13px }
 
 .shell {
   height:100%;

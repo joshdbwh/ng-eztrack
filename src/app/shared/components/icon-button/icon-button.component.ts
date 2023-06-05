@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -11,10 +12,10 @@ import { IconComponent } from '../icon/icon.component';
 @Component({
   selector: 'app-icon-button',
   standalone: true,
-  imports: [MatButtonModule, IconComponent],
+  imports: [NgClass, MatButtonModule, IconComponent],
   template: `
-    <a mat-icon-button (click)="onClick()">
-      <app-icon [icon]="icon" size="medium" />
+    <a mat-icon-button (click)="onClick()" [ngClass]="'icon-button-' + size">
+      <app-icon [icon]="icon" [size]="size" [isButton]="true" />
     </a>
   `,
   styleUrls: ['./icon-button.component.scss'],
@@ -22,6 +23,7 @@ import { IconComponent } from '../icon/icon.component';
 })
 export class IconButtonComponent {
   @Input({ required: true }) icon = '';
+  @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Output() event = new EventEmitter<void>();
 
   onClick() {

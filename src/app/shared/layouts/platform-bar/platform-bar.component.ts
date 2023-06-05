@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { IconButtonComponent } from '../../components/icon-button/icon-button.component';
 
@@ -12,13 +12,22 @@ import { IconButtonComponent } from '../../components/icon-button/icon-button.co
         <app-icon-button icon="menu" (event)="event()" />
       </div>
       <div class="platform-bar-middle"></div>
-      <div class="platform-bar-right"></div>
+      <div class="platform-bar-right">
+        <app-icon-button icon="account_circle" (event)="profileMenuClick()" />
+      </div>
     </mat-toolbar>
   `,
   styleUrls: ['./platform-bar.component.scss'],
 })
 export class PlatformBarComponent {
+  @Output() navEvent = new EventEmitter<any>();
+  @Output() profileEvent = new EventEmitter<any>();
+
   event() {
-    console.log(`event emitted!`);
+    this.navEvent.emit();
+  }
+
+  profileMenuClick() {
+    this.profileEvent.emit();
   }
 }
