@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'link', pathMatch: 'full' },
-  { path: 'budget', loadChildren: () => import('./features/budget/routes') },
-  { path: 'link', loadChildren: () => import('./features/link/routes') },
+  {
+    path: 'spending-report',
+    loadChildren: () => import('./spending-report/spending-report.routes'),
+  },
+  { path: 'link', loadChildren: () => import('./link/link.routes') },
 ];

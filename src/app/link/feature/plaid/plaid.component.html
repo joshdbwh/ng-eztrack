@@ -1,0 +1,30 @@
+
+<!-- <button
+  ngxPlaidLink
+  env="development"
+  publicKey="6129ddf94fc860001010f369"
+  [token]="linkToken"
+  [countryCodes]="['US', 'CA', 'GB']"
+  (Success)="onPlaidSuccess($event)"
+  (Exit)="onPlaidExit($event)"
+  (Load)="onPlaidLoad($event)"
+  (Event)="onPlaidEvent($event)"
+  className="launch-plaid-link-button"
+  buttonText="Link Your Bank Account"
+  (Click)="onPlaidClick($event)"
+  [disabled]="receivedLinkToken"
+>Link</button> -->
+
+<p>link_token: {{ (linkToken$ | async) }}</p>
+
+<ng-container *ngIf="(linkToken$ | async) as token">
+  <button ngxPlaidLink
+      env="development"
+      publicKey="6129ddf94fc860001010f369"
+      [token]="token"
+      (Success)="onSuccess($event)"
+      (Exit)="onExit($event)"
+      (Load)="onLoad($event)"
+      (Event)="onEvent($event)"
+  >Connect a bank account</button>
+</ng-container>

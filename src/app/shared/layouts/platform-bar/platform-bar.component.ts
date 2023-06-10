@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { IconButtonComponent } from '../../components/icon-button/icon-button.component';
+import { IconButtonComponent } from '../../ui/icon-button/icon-button.component';
 
 @Component({
   selector: 'app-platform-bar',

@@ -1,16 +1,14 @@
-import { routes } from './app.routes';
-import { NavigationService } from './core/services/navigation/navigation.service';
-import { Component, Inject, OnInit } from '@angular/core';
+import { NavigationService } from './shared/utils/navigation/navigation.service';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { PlatformBarComponent } from './shared/layouts/platform-bar/platform-bar.component';
-import { LinkComponent } from './features/link/link.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { NavListComponent } from './shared/components/nav-list/nav-list.component';
-import { NavItem, NavItems } from './core/interfaces/navItem.interface';
-import { Observable } from 'rxjs';
-import { IconComponent } from './shared/components/icon/icon.component';
+import { NavListComponent } from './shared/ui/nav-list/nav-list.component';
+import { NavItem, NavItems } from './shared/utils/navItem.interface';
+import { Observable } from 'rxjs/internal/Observable';
+import { IconComponent } from './shared/ui/icon/icon.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 
@@ -19,7 +17,6 @@ import { MatDividerModule } from '@angular/material/divider';
   standalone: true,
   imports: [
     CommonModule,
-    LinkComponent,
     RouterOutlet,
     IconComponent,
     PlatformBarComponent,

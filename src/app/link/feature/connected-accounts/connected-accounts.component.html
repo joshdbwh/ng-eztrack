@@ -1,0 +1,36 @@
+<div class="viewport">
+
+<app-card title="Account Balances">
+  <ng-container *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </ng-container>
+  <ng-container *ngIf="!isLoading">
+    <table mat-table [dataSource]="dataSource">
+    <!-- User name Definition -->
+    <ng-container matColumnDef="mask">
+      <mat-header-cell *matHeaderCellDef> Mask </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.mask }} </mat-cell>
+    </ng-container>
+
+    <!-- Age Definition -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Title Definition -->
+    <ng-container matColumnDef="balance">
+      <mat-header-cell *matHeaderCellDef> Balance </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.balances['available'] }} </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *matHeaderRowDef="['mask', 'name', 'balance']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['mask', 'name', 'balance']"></mat-row>
+  </table>
+  </ng-container>
+</app-card>
+
+
+
+</div>
