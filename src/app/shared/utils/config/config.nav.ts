@@ -27,4 +27,12 @@ export default [
       { path: '/link/plaid', title: 'Plaid', icon: 'paid' },
     ],
   },
+  {
+    path: 'ui-showcase',
+    title: 'UI Showcase',
+    icon: 'view_quilt',
+    children: [
+      { path: '/ui-showcase/buttons', title: 'Buttons', icon: 'gamepad' },
+    ],
+  },
 ] as NavItems;

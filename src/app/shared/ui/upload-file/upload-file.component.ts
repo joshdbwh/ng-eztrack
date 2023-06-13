@@ -1,13 +1,22 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from '../button/button.component';
+import { IconButtonComponent } from '../icon-button/icon-button.component';
 
 @Component({
   selector: 'app-upload-file',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, IconButtonComponent],
   template: `
     <div class="upload-file">
-      <input type="file" id="file" (change)="handleFileInput($event)" />
+      <app-icon-button icon="upload" (event)="file.click()" />
+      <input
+        hidden
+        type="file"
+        id="file"
+        #file
+        (change)="handleFileInput($event)"
+      />
     </div>
   `,
   styleUrls: ['./upload-file.component.scss'],

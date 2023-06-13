@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [MatButtonModule, NgClass],
   template: `
-    <p>
-      button works!
-    </p>
+    <div class="button-container">
+      <button mat-button class="button" [ngClass]="type" disabled>
+        <ng-content />
+      </button>
+    </div>
   `,
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-
+  @Input() type: 'borderless' | 'bezeled-grey' | 'bezeled' | 'filled' =
+    'borderless';
+  @Input() isDisabled = false;
 }
